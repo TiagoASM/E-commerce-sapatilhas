@@ -1,0 +1,68 @@
+﻿@page
+@model ProjetoEcommerceSapatilhas.Pages.Shared.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/Login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/337cd3854e.js" crossorigin="anonymous"></script>
+</head>
+
+<header>
+    <div class="name">
+        <a href="@Url.Page("/Index")" style="text-decoration: none; color: inherit;">PISANTTE</a>
+    </div>
+    <div class="logotipo">
+        <a href="@Url.Page("/Index")">
+            <img src="/Images/Pisantte logo.png" alt="Pisantte logo">
+        </a>        
+    </div>
+
+    <div class="ico">
+        <span class="sobre-element-content"><a href="#">SOBRE NÓS</a></span>
+        <button class="bag">
+            <img src="/Images/Shopping bag.png" alt="Carrinho das Compras">
+        </button>
+        <button src="myicon">
+            <img src="/Images/User.png" alt="User">
+        </button>
+    </div>
+
+</header>
+
+<body>
+
+    <div class="login-container">
+        <h2>Iniciar Sessão</h2>
+        <form method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" asp-for="Input.Email"required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" asp-for="Input.Password" required>
+
+            <button type="submit" class="login-button">Iniciar Sessão</button>
+        </form>
+        <div>
+            @if (!ModelState.IsValid)
+            {
+                <p>@Html.ValidationSummary()</p>
+            }
+        </div>
+
+        <p>Não tem conta? <a href="@Url.Page("/Account/Register")">Registe-se aqui</a></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+﻿/* Estilos gerais do header */
+header {
+    background-color: #fff;
+    padding: 40px 0; /* Mantido para descer os elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+/* Nome da marca */
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 10px; /* Ajuste para mover o nome mais para baixo */
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Logotipo centralizado e aumentado */
+.logotipo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    .logotipo img {
+        height: 100px; /* Mantido em 100px */
+    }
+
+/* Seção direita: Sobre Nós + Ícones */
+.ico {
+    display: flex;
+    align-items: center;
+    margin-right: 25px; /* Ajuste para evitar que fique colado à lateral */
+}
+
+/* Espaçamento maior entre os itens à direita */
+.sobre-element-content {
+    margin-right: 15px; /* Mantido o espaçamento entre "SOBRE NÓS" e os ícones */
+}
+
+    .sobre-element-content a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-family: 'Jockey One', sans-serif; /* Fonte Jockey One */
+    }
+
+        .sobre-element-content a:hover {
+            color: blue; /* Muda a cor para azul quando o mouse está em cima */
+        }
+
+/* Espaçamento entre os ícones */
+.ico button {
+    margin-left: 18px; /* Mantido o espaçamento entre os ícones */
+    background: none; /* Remove fundo do botão */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+/* Ícones de Font Awesome */
+.ico img {
+    width: 24px; /* Ajuste para definir o tamanho do ícone */
+    height: 24px; /* Ajuste para definir o tamanho do ícone */
+    background: none; /* Remove fundo do botão */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+/* Container do formulário */
+.login-container {
+    border: 1px solid #ccc; /* Borda ao redor do quadrado */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 500px; /* Largura máxima do quadrado */
+    margin: 60px auto; /* Aumentei a margem superior para 60px para descer mais */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    font-family: Arial, sans-serif; /* Fonte para o container do formulário */
+}
+
+    .login-container a {
+        color: black; /* Define a cor do texto do link como preto */
+        text-decoration: none; /* Remove o sublinhado do link */
+    }
+
+        .login-container a:hover {
+            text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+            color: #333; /* Muda a cor para um tom mais escuro de preto ao passar o mouse */
+        }
+
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #eaeaea;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh; /* Faz com que a sidebar ocupe a altura total da página */
+    position: fixed; /* Mantém a sidebar fixa ao rolar */
+}
+
+    .sidebar h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+            .sidebar ul li a {
+                text-decoration: none;
+                color: #000;
+                font-size: 16px;
+                padding: 10px 0;
+                display: block;
+                font-family: 'Poppins', sans-serif;
+            }
+
+                .sidebar ul li a:hover {
+                    background-color: #f2f2f2;
+                    padding-left: 10px;
+                }
+
+                .sidebar ul li a.active {
+                    background-color: #f8f8f8;
+                    font-weight: 600;
+                    padding-left: 10px;
+                }
+
+/* Content */
+.content {
+    margin-left: 280px; /* Deixando espaço para a sidebar fixa */
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.active-section {
+    display:block;
+}
+
+
+.section {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    display:flex;
+    position: relative;
+    flex-direction: column;
+}
+
+    .section h3 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .section p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .section .action {
+        margin-top: 10px;
+    }
+
+        .section .action a {
+            text-decoration: none;
+            color: #d20e56;
+            font-weight: 600;
+        }
+
+            .section .action a:hover {
+                text-decoration: underline;
+            }
+
+.caixaEdit {
+    border: none;
+    outline: none;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid black;
+    margin-top: 12px; 
+    width:300px;
+    box-sizing:border-box;
+    padding-right: 30px;
+}
+
+.caixaEditDC {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    width: 300px;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+
+
+.input-wrapper {
+    position: relative;
+    margin-top: 10px;
+    width:300px;
+}
+
+.passwordViewer {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%); /* Centraliza verticalmente o ícone */
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1em; /* Tamanho do ícone */
+    color: #555; /* Cor do ícone */
+    padding: 0;
+    outline: none;  
+}
+
+.input-label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.2s ease-in;
+}
+
+.caixaEdit:focus + .input-label, .caixaEdit:not(:placeholder-shown) + .input-label {
+    top: 0;
+    transform: translateY(-100%);
+    font-size: 13px;
+    color: black;
+    margin-top: 15px;
+}
+
+.butaoGuardar {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: #d20e56;
+    font-weight: 600;
+    margin-top: 10px
+}
+
+    .butaoGuardar:hover {
+        text-decoration: underline;
+    }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        border-right: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}

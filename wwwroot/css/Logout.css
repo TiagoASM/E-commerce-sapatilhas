@@ -1,0 +1,13 @@
+﻿.logout-link {
+    color: black; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte para Semibold */
+    font-family: 'Roboto Flex', sans-serif; /* Aplicando Roboto Flex */
+    font-style: italic; /* Opcional: remove se nÃ£o for desejado */
+    text-decoration: none; /* Remove o sublinhado */
+    margin-left: 0px; /* EspaÃ§amento Ã  esquerda dos links */
+}
+
+.logout-link:hover{
+    color: #444;
+}

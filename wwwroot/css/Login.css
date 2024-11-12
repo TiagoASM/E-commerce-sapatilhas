@@ -1,0 +1,135 @@
+﻿/* Estilos gerais do header */
+header {
+    background-color: #fff;
+    padding: 40px 0; /* Mantido para descer os elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+/* Nome da marca */
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 10px; /* Ajuste para mover o nome mais para baixo */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+/* Logotipo centralizado e aumentado */
+.logotipo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    .logotipo img {
+        height: 100px; /* Mantido em 100px */
+    }
+
+/* SeÃ§Ã£o direita: Sobre NÃ³s + Ãcones */
+.ico {
+    display: flex;
+    align-items: center;
+    margin-right: 25px; /* Ajuste para evitar que fique colado Ã  lateral */
+}
+
+/* EspaÃ§amento maior entre os itens Ã  direita */
+.sobre-element-content {
+    margin-right: 15px; /* Mantido o espaÃ§amento entre "SOBRE NÃ“S" e os Ã­cones */
+}
+
+    .sobre-element-content a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-family: 'Jockey One', sans-serif; /* Fonte Jockey One */
+    }
+
+        .sobre-element-content a:hover {
+            color: #444 /* Muda a cor para azul quando o mouse estÃ¡ em cima */
+        }
+
+
+/* EspaÃ§amento entre os Ã­cones */
+.ico button {
+    margin-left: 18px; /* Mantido o espaÃ§amento entre os Ã­cones */
+    background: none; /* Remove fundo do botÃ£o */
+    border: none; /* Remove borda do botÃ£o */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botÃ£o */
+}
+
+/* Ãcones de Font Awesome */
+.ico img {
+    width: 24px; /* Ajuste para definir o tamanho do Ã­cone */
+    height: 24px; /* Ajuste para definir o tamanho do Ã­cone */
+    background: none; /* Remove fundo do botÃ£o */
+    border: none; /* Remove borda do botÃ£o */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botÃ£o */
+}
+
+
+/* Container do formulÃ¡rio */
+.login-container {
+    border: 1px solid #ccc; /* Borda ao redor do quadrado */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* EspaÃ§amento interno */
+    max-width: 500px; /* Largura mÃ¡xima do quadrado */
+    margin: 60px auto; /* Aumentei a margem superior para 60px para descer mais */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    font-family: Arial, sans-serif; /* Fonte para o container do formulÃ¡rio */
+}
+
+    .login-container a {
+        color: black; /* Define a cor do texto do link como preto */
+        text-decoration: none; /* Remove o sublinhado do link */
+    }
+
+        .login-container a:hover {
+            text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+            color: #333; /* Muda a cor para um tom mais escuro de preto ao passar o mouse */
+        }
+/* Estilo dos tÃ­tulos */
+h2 {
+    font-family: 'Jockey One', sans-serif; /* Fonte Jockey One */
+    margin-bottom: 28px; /* EspaÃ§amento abaixo do tÃ­tulo */
+}
+
+/* Estilo dos rÃ³tulos */
+label {
+    display: block; /* Faz os rÃ³tulos ocuparem toda a largura */
+    margin-bottom: 5px; /* EspaÃ§amento abaixo do rÃ³tulo */
+}
+
+/* Estilo dos campos de entrada */
+input {
+    width: 75%; /* Campos ocupam toda a largura do container */
+    padding: 10px; /* EspaÃ§amento interno dos campos */
+    margin-bottom: 15px; /* EspaÃ§amento abaixo dos campos */
+    border: 1px solid #ccc; /* Borda dos campos */
+    border-radius: 4px; /* Bordas arredondadas para os campos */
+    font-family: Arial, sans-serif; /* Fonte para os campos de entrada */
+}
+
+/* Estilo do botÃ£o Iniciar SessÃ£o */
+.login-button {
+    background-color: #000; /* Cor de fundo do botÃ£o */
+    color: #fff; /* Cor do texto do botÃ£o */
+    border: none; /* Remove a borda padrÃ£o */
+    padding: 10px; /* EspaÃ§amento interno do botÃ£o */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mÃ£o ao passar o mouse */
+    margin-top: 15px; /* EspaÃ§amento acima dos campos */
+    margin-bottom: 15px; /* EspaÃ§amento abaixo dos campos */
+    font-family: Arial, sans-serif; /* Fonte para o botÃ£o */
+}
+
+    /* Efeito de hover no botÃ£o Iniciar SessÃ£o */
+    .login-button:hover {
+        background-color: #444; /* Cor mais clara no hover */
+    }

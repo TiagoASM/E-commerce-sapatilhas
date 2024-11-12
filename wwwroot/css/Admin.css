@@ -1,0 +1,10 @@
+﻿.admin-name{
+    color: black;
+    text-decoration: none;
+    padding-right: 7.5px;
+}
+    .admin-name:hover{
+        text-decoration: underline;
+        color:black;
+    }
+

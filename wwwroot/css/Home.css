@@ -1,0 +1,251 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+/* Barra preta superior com promoÃ§Ãµes e idiomas */
+.top-bar {
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
+    padding: 10px 20px; /* EspaÃ§amento interno */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+    .top-bar > div {
+        justify-content: space-between; /* Itens distribuÃ­dos entre a barra */
+        align-items: center; /* Alinha os itens verticalmente */
+        display: flex;
+    }
+
+.info {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Roboto Semibold', sans-serif;
+    font-style: italic;
+}
+
+
+.saldos {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Roboto Semibold', sans-serif;
+    font-style: italic;
+}
+
+.language-button {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Sem bordas */
+    color: white; /* Cor do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    font-family: 'Roboto Semibold', sans-serif; /* Fonte */
+    font-style: italic; /* Estilo em itÃ¡lico */
+    margin: 0 2px; /* Margem lateral para espaÃ§amento */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+    .language-button:hover {
+        text-decoration: underline; /* Sublinhado ao passar o mouse */
+    }
+
+.nav_logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: SemiBold;
+}
+
+
+/* Estilos gerais da barra de navegaÃ§Ã£o */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* EspaÃ§a os itens corretamente */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Barra de Pesquisa alinhada Ã  esquerda */
+.search-container {
+    position: relative;
+    flex: 1;
+    max-width: 200px; /* DiminuÃ­ o tamanho mÃ¡ximo da barra de pesquisa */
+}
+
+.search-bar {
+    width: 90%;
+    padding: 10px 45px 10px 15px; /* Manteve o espaÃ§o para o Ã­cone */
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: black;
+    font-size: 14px; /* DiminuÃ­ o tamanho da fonte dentro da barra */
+    outline: none;
+    color: white;
+}
+
+/* Ãcone de pesquisa dentro da barra */
+.search-button {
+    position: absolute;
+    right: 15px; /* MantÃ©m o Ã­cone prÃ³ximo Ã  borda direita */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+    .search-button img {
+        width: 30px; /* Aumentei o tamanho do Ã­cone */
+        height: 30px;
+    }
+
+/* Centralizar o Logo */
+.logo {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+    .logoTexto {
+        color: black;
+        text-decoration: none;
+    }
+
+        .logoTexto:hover {
+            color: #444;
+        }
+
+
+
+/* Estilos para os links de autenticaÃ§Ã£o */
+.auth-links {
+    display: flex; /* Usado para alinhar Ã­cones e links */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 15px; /* EspaÃ§amento entre os Ã­cones e os links */
+}
+
+    .auth-links button {
+        background: none; /* Remove fundo do botÃ£o */
+        border: none; /* Remove borda do botÃ£o */
+        cursor: pointer; /* Muda o cursor ao passar sobre o botÃ£o */
+    }
+
+    .auth-links img {
+        width: 24px; /* Tamanho do Ã­cone do cesto e do usuÃ¡rio */
+        height: 24px;
+    }
+
+    /* Remover a linha debaixo dos links de autenticaÃ§Ã£o */
+    .auth-links a {
+        color: black; /* Cor do texto */
+        font-size: 14px; /* Tamanho da fonte */
+        font-weight: 600; /* Peso da fonte para Semibold */
+        font-family: 'Roboto Flex', sans-serif; /* Aplicando Roboto Flex */
+        font-style: italic; /* Opcional: remove se nÃ£o for desejado */
+        text-decoration: none; /* Remove o sublinhado */
+        margin-left: 0px; /* EspaÃ§amento Ã  esquerda dos links */
+    }
+
+        /* Adicionando um estilo para remover a linha ao passar o mouse */
+        .auth-links a:hover {
+            text-decoration: none; /* Garante que nÃ£o apareÃ§a linha ao passar o mouse */
+        }
+/* SeÃ§Ã£o das marcas e saldos abaixo do logo */
+.brands-and-sales {
+    display: flex;
+    flex-direction: column; /* Coloca marcas em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 30px 0; /* Aumentado o espaÃ§amento acima e abaixo */
+    border-top: 1px solid #ccc; /* Linha separando do logo */
+}
+
+/* Estilos das Marcas */
+.brands {
+    position: relative;
+            display: inline-block;
+            color: blue;
+            text-decoration: none;
+}
+
+    /* Estilos gerais para os links das marcas */
+    .brands a {
+        color: black; /* Cor padrão para as marcas */
+        font-size: 18px; /* Aumentado o tamanho da fonte */
+        font-weight: bold;
+        text-decoration: none;
+        font-family: 'Jockey One', sans-serif; /* Usando a fonte Jockey One */
+        transition: color 0.3s ease;
+        margin-right: 35px;
+        position: relative;
+        display: inline-block; /* Necessário para ajustar o sublinhado ao tamanho do texto */
+    }
+
+        /* Estilos especÃ­ficos para "Saldos" */
+        .brands a.saldos {
+            color: red; /* Cor vermelha para "Saldos" */
+        }
+
+
+        /* Animação de sublinhado ajustada ao tamanho do texto */
+        .brands a:not(.saldos)::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -0.5px; /* Coloca a linha exatamente debaixo do texto */
+            left: 0;
+            background-color: black;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .brands a.saldos::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -0.5px; /* Coloca a linha exatamente debaixo do texto */
+            left: 0;
+            background-color: red;
+            transition: width 0.3s ease-in-out;
+        }
+
+        /* Hover - Animação do sublinhado ajustado ao tamanho do texto */
+        .brands a:hover::after {
+            width: 100%; /* Expande o sublinhado debaixo do texto */
+        }
+
+/* --- Slideshow de imagens --- */
+
+/* Container do slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%; /* Ocupa toda a largura da tela */
+    margin: auto;
+    overflow: hidden; /* Esconde as imagens que não estão visíveis */
+    height: 90vh; /* Define uma altura para o container, opcional */
+}
+
+/* Estilo das imagens do slideshow */
+.image-container {
+    position: absolute; /* As imagens serão sobrepostas umas às outras */
+    top: 0;
+    left: 0;
+    width: 100%; /* As imagens ocuparão toda a largura do container */
+    height: 100%; /* Elas ocuparão toda a altura do container */
+    opacity: 0; /* Inicialmente, todas as imagens estão invisíveis */
+    transition: opacity 1.5s ease-in-out; /* Transição suave na opacidade */
+}
+
+    /* Imagem dentro do container */
+    .image-container img {
+        width: 100%; /* As imagens ocuparão 100% da largura do container */
+        height: 100%; /* As imagens ocuparão 100% da altura do container */
+        object-fit: cover; /* Cobre o container com a imagem sem deformar */
+    }
+
+    /* Define que a imagem visível será opaca (1), e as outras transparentes (0) */
+    .image-container.fade {
+        opacity: 1;
+    }
+
+

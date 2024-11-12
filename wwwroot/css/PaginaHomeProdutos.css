@@ -1,0 +1,56 @@
+﻿.novidades-section {
+    margin: 40px auto;
+    text-align: center;
+    max-width: 1200px;
+}
+
+.novidades-titulo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.produto-recente-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.produto-card {
+    width: 18%;
+    text-align: center; 
+}
+
+.produto-imagem{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.produto-nome {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.produto-preco {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.ver-mais-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+    .ver-mais-link:hover {
+        text-decoration: underline;
+    }
+

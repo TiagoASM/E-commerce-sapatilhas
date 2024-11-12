@@ -1,0 +1,22 @@
+﻿@page
+@model ProjetoEcommerceSapatilhas.Pages.Account.RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Confirmação de Registro";
+}
+
+<h2>Confirmação de Registro</h2>
+
+@if (Model.DisplayConfirmAccountLink)
+{
+    <p>
+        Um e-mail de confirmação foi enviado para <strong>@Model.Email</strong>.
+        Verifique sua caixa de entrada e clique no link para confirmar sua conta.
+    </p>
+    <p>
+        Caso não tenha recebido o e-mail, <a asp-page="./ResendConfirmationEmail" asp-route-email="@Model.Email">clique aqui</a> para reenviá-lo.
+    </p>
+}
+else
+{
+    <p>Seu registro foi realizado com sucesso. Você pode fazer login na sua conta.</p>
+}

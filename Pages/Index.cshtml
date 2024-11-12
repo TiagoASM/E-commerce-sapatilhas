@@ -1,0 +1,172 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pisantte - Loja Virtual</title>
+    <link rel="stylesheet" href="/css/Home.css?v=1.1">
+    <link rel="stylesheet" href="/css/PaginaHomeProdutos.css?v=1.1">
+    <link rel="stylesheet" href="/css/Logout.css?v=1.1">
+    <link rel="stylesheet" href="/css/Admin.css?v=1.1"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/337cd3854e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Barra preta com informações de promoções e idiomas -->
+    <div class="top-bar">
+        <div class="info">
+            <!--info, portes gratis-->
+            <a id="nav_logo">
+                <i class="fa-solid fa-truck"></i> Portes Gratuitos
+            </a>
+            <div class="saldos">
+                <!--saldos-->
+                <a id="saldos_text">SALDOS ATÉ 50%</a>
+            </div><!--saldos-->
+            <div class="idiomas">
+                <!--idiomas-->
+                <button class="language-button" onclick="setLanguage('PT')">PT</button>
+                <button class="language-button" onclick="setLanguage('UK')">UK</button>
+                <button class="language-button" onclick="setLanguage('FR')">FR</button>
+                <button class="language-button" onclick="setLanguage('ES')">ES</button>
+            </div><!--idiomas-->
+        </div><!--info, portes gratis-->
+    </div>
+
+    <!-- Navbar principal -->
+    <header>
+        <div class="navbar">
+            <!-- Barra de Pesquisa -->
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Procurar...">
+                <button class="search-button">
+                    <img src="/Images/Trailing-Elements.svg" alt="Search">
+                </button>
+            </div>
+
+            <!-- Logo centralizado -->
+            <div class="logo">
+                <a href="@Url.Page("/Index")" class="logoTexto">PISANTTE</a>
+            </div>
+
+            @if (SignInManager.IsSignedIn(User))
+            {
+
+                @if (Model.LoggedInUser.UserName == "Admin")
+                {
+                    <a href="@Url.Page("/Admin/AdminPage")" class="admin-name">@Model.LoggedInUser.UserName</a>
+                    <form id="logoutForm" asp-page="/Account/Logout" method="post">
+                        <a href="javascript:document.getElementById('logoutForm').submit()" class="logout-link">Logout</a>
+                    </form>
+                }
+                else
+                {
+                    <div class="auth-links">
+                        <button class="bag">
+                            <img src="/Images/Shopping bag.png" alt="Carrinho das Compras">
+                        </button>
+                        <button src="myicon">
+                            <a href="@Url.Page("/Account/UserPage")">
+                                <img src="/Images/User.png" alt="User">
+                            </a>
+                        </button>
+                    </div>
+                    <a>@Model.LoggedInUser.UserName &nbsp;</a>
+                    <form id="logoutForm" asp-page="/Account/Logout" method="post">
+                        <a href="javascript:document.getElementById('logoutForm').submit()" class="logout-link">Logout</a>
+                    </form>
+                }
+
+            }
+
+            else
+            {
+                <!-- Links de Login/Register -->
+                <div class="auth-links">
+                    <button class="bag">
+                        <img src="/Images/Shopping bag.png" alt="Carrinho das Compras">
+                    </button>
+                    <button src="myicon">
+                        <img src="/Images/User.png" alt="User">
+                    </button>
+                    <a href="@Url.Page("/Account/Login")">Login</a> / <a href="@Url.Page("/Account/Register")">Register</a>
+                </div>
+            }
+
+        </div>
+    </header>
+
+    <div class="brands-and-sales">
+        <!-- Marcas -->
+        <div class="brands">
+            <a href="#">ADIDAS</a>
+            <a href="#">JORDAN 4</a>
+            <a href="#">NEW BALANCE</a>
+            <a href="#">DUNK</a>
+            <a href="#">AIR FORCE 1</a>
+            <a href="#">YEEZY</a>
+            <a class="saldos" href="#">SALDOS</a> <!-- Adicionado Saldos com classe específica -->
+        </div>
+    </div>
+
+    <!-- Imagem abaixo das marcas -->
+    <div class="slideshow-container">
+        <div class="image-container fade">
+            <img src="/Images/paginaP1.png" alt="First">
+        </div>
+        <div class="image-container fade">
+            <img src="/Images/paginaP2.png" alt="Second">
+        </div>
+        <div class="image-container fade">
+            <img src="/Images/paginaP3.png" alt="Third">
+        </div>
+    </div>
+
+    <script src="/js/ImageScrolling.js"></script>
+
+    <!-- Seção Mais Vendidos -->
+    <!--Novidades-->
+    <section class="novidades-section">
+        <h2 class="novidades-titulo">Novidades</h2>
+        <div class="produto-recente-container">
+            @if (Model.SapatilhasRecentes != null && Model.SapatilhasRecentes.Any())
+            {
+                foreach (var sapatilha in Model.SapatilhasRecentes)
+                {
+                    <div class="produto-card">
+                        <img src="@sapatilha.Imagem" alt="@sapatilha.Nome" class="produto-imagem" />
+                        <h3 class="produto-nome">@sapatilha.Nome</h3>
+                        <p class="produto-preco">@sapatilha.Preco€</p>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Nenhum produto recente encontrado.</p>
+            }
+        </div>
+
+        <a href="/produtos" class="ver-mais-link">Ver Mais ➔</a>
+    </section>
+
+
+
+</body>
+</html>

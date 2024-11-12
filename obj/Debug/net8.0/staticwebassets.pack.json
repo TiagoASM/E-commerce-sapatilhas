@@ -1,0 +1,365 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/obj/Debug/net8.0/scopedcss/projectbundle/ProjetoEcommerceSapatilhas.bundle.scp.css",
+      "PackagePath": "staticwebassets/ProjetoEcommerceSapatilhas.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/Pisantte logo.png",
+      "PackagePath": "staticwebassets/Images/Pisantte logo.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/Shopping bag.png",
+      "PackagePath": "staticwebassets/Images/Shopping bag.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/Trailing-Elements.svg",
+      "PackagePath": "staticwebassets/Images/Trailing-Elements.svg"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/User.png",
+      "PackagePath": "staticwebassets/Images/User.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/airjorda4.png",
+      "PackagePath": "staticwebassets/Images/airjorda4.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/airjordalow.png",
+      "PackagePath": "staticwebassets/Images/airjordalow.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/chinelosyeezy.png",
+      "PackagePath": "staticwebassets/Images/chinelosyeezy.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/dunktravis.png",
+      "PackagePath": "staticwebassets/Images/dunktravis.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/gazelle indoor.png",
+      "PackagePath": "staticwebassets/Images/gazelle indoor.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/jordan4off.png",
+      "PackagePath": "staticwebassets/Images/jordan4off.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/newbalance550.png",
+      "PackagePath": "staticwebassets/Images/newbalance550.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/nikeairforce.png",
+      "PackagePath": "staticwebassets/Images/nikeairforce.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/nikedunkPanda.png",
+      "PackagePath": "staticwebassets/Images/nikedunkPanda.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/paginaP1.png",
+      "PackagePath": "staticwebassets/Images/paginaP1.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/paginaP2.png",
+      "PackagePath": "staticwebassets/Images/paginaP2.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/paginaP3.png",
+      "PackagePath": "staticwebassets/Images/paginaP3.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/yeezy350x.png",
+      "PackagePath": "staticwebassets/Images/yeezy350x.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/Admin.css",
+      "PackagePath": "staticwebassets/css/Admin.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/AdminPage.css",
+      "PackagePath": "staticwebassets/css/AdminPage.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/Home.css",
+      "PackagePath": "staticwebassets/css/Home.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/Login.css",
+      "PackagePath": "staticwebassets/css/Login.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/Logout.css",
+      "PackagePath": "staticwebassets/css/Logout.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/PaginaHomeProdutos.css",
+      "PackagePath": "staticwebassets/css/PaginaHomeProdutos.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/Register.css",
+      "PackagePath": "staticwebassets/css/Register.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/UserPage.css",
+      "PackagePath": "staticwebassets/css/UserPage.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ProjetoEcommerceSapatilhas.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ProjetoEcommerceSapatilhas.props",
+      "PackagePath": "build\\ProjetoEcommerceSapatilhas.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ProjetoEcommerceSapatilhas.props",
+      "PackagePath": "buildMultiTargeting\\ProjetoEcommerceSapatilhas.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ProjetoEcommerceSapatilhas.props",
+      "PackagePath": "buildTransitive\\ProjetoEcommerceSapatilhas.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

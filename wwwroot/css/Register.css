@@ -1,0 +1,142 @@
+﻿/* Estilos gerais do header */
+header {
+    background-color: #fff;
+    padding: 40px 0; /* Mantido para descer os elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+/* Nome da marca */
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 10px; /* Ajuste para mover o nome mais para baixo */
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Logotipo centralizado e aumentado */
+.logotipo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    .logotipo img {
+        height: 100px; /* Mantido em 100px */
+    }
+
+/* Seção direita: Sobre Nós + Ícones */
+.ico {
+    display: flex;
+    align-items: center;
+    margin-right: 25px; /* Ajuste para evitar que fique colado à lateral */
+}
+
+/* Espaçamento maior entre os itens à direita */
+.sobre-element-content {
+    margin-right: 15px; /* Mantido o espaçamento entre "SOBRE NÓS" e os ícones */
+}
+
+    .sobre-element-content a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-family: 'Jockey One', sans-serif; /* Fonte Jockey One */
+    }
+
+        .sobre-element-content a:hover {
+            color: #444; /* Muda a cor para azul quando o mouse está em cima */
+            transition: color 0.3s ease;
+        }
+
+
+/* Espaçamento entre os ícones */
+.ico button {
+    margin-left: 18px; /* Mantido o espaçamento entre os ícones */
+    background: none; /* Remove fundo do botão */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+/* Ícones de Font Awesome */
+.ico img {
+    width: 24px; /* Ajuste para definir o tamanho do ícone */
+    height: 24px; /* Ajuste para definir o tamanho do ícone */
+    background: none; /* Remove fundo do botão */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+/* Container do formulário de Criar Conta */
+.signup-container {
+    border: 1px solid #ccc; /* Borda ao redor do quadrado */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 500px; /* Largura máxima do quadrado */
+    margin: 60px auto; /* Aumentei a margem superior para 60px para descer mais */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    font-family: Arial, sans-serif; /* Fonte para o container do formulário */
+}
+
+    /* Estilo dos títulos */
+    .signup-container h2 {
+        font-family: 'Jockey One', sans-serif; /* Fonte Jockey One */
+        margin-bottom: 28px; /* Espaçamento abaixo do título */
+    }
+
+    .signup-container a {
+        color: black; /* Define a cor do texto do link como preto */
+        text-decoration: none; /* Remove o sublinhado do link */
+    }
+
+        /* Efeito de hover para o link */
+        .signup-container a:hover {
+            text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+            color: #333; /* Muda a cor para um tom mais escuro de preto ao passar o mouse */
+        }
+/* Estilo dos rótulos */
+label {
+    display: block; /* Faz os rótulos ocuparem toda a largura */
+    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+}
+
+/* Estilo dos campos de entrada */
+input {
+    width: 80%; /* Campos ocupam toda a largura do container */
+    padding: 10px; /* Espaçamento interno dos campos */
+    margin-bottom: 15px; /* Espaçamento abaixo dos campos */
+    border: 1px solid #ccc; /* Borda dos campos */
+    border-radius: 4px; /* Bordas arredondadas para os campos */
+    font-family: Arial, sans-serif; /* Fonte para os campos de entrada */
+}
+
+/* Estilo do botão Criar Conta */
+.signup-button {
+    background-color: #000; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 10px; /* Espaçamento interno do botão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    margin-top: 15px; /* Espaçamento acima dos campos */
+    margin-bottom: 15px; /* Espaçamento abaixo dos campos */
+    font-family: Arial, sans-serif; /* Fonte para o botão */
+}
+
+    /* Efeito de hover no botão Criar Conta */
+    .signup-button:hover {
+        background-color: #444; /* Cor mais clara no hover */
+    }
+
+/* Mensagem de erro */
+#error-message {
+    color: red; /* Cor da mensagem de erro */
+    margin-top: 10px; /* Espaçamento acima da mensagem */
+}

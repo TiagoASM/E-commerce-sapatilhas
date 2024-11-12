@@ -1,0 +1,228 @@
+﻿@page
+@model ProjetoEcommerceSapatilhas.Pages.Account.UserPageModel
+@{
+    var urlPage = Url.Page("/Account/UserPage");
+}
+
+
+<!DOCTYPE html>
+<html lang="pt-PT ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="/css/UserPage.css?v=1.4">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/337cd3854e.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    /* Ocultar todas as secções inicialmente */
+    .section {
+        display: none;
+    }
+
+    /* Exibir a secção ativa */
+    .active-section {
+        display: block;
+    }
+
+    /* Estilos adicionais podem ir aqui */
+</style>
+<header>
+    <div class="name">
+        <a href="@Url.Page("/Index")" style="text-decoration: none; color: inherit;">PISANTTE</a>
+    </div>
+    <div class="logotipo">
+        <img src="/Images/Pisantte logo.png" alt="Pisantte logo">
+    </div>
+
+    <div class="ico">
+        <span class="sobre-element-content"><a href="#">SOBRE NÓS</a></span>
+        <button class="bag">
+            <img src="/Images/Shopping bag.png" alt="Carrinho das Compras">
+        </button>
+        <button src="myicon">
+            <img src="/Images/User.png" alt="User">
+        </button>
+    </div>
+
+</header>
+<body>
+    <!-- Sidebar da conta do usuário -->
+    <div class="sidebar">
+        <h2>A Minha Conta</h2>
+        <ul>
+            <li><a href="#" class="menu-item" data-target="pagina-principal">Página principal</a></li>
+            <li><a href="#" class="menu-item" data-target="dados-contacto">Dados de contacto</a></li>
+            <li><a href="#" class="menu-item" data-target="minhas-moradas">As Minhas Moradas</a></li>
+            <li><a href="#" class="menu-item" data-target="minhas-encomendas">As Minhas Encomendas</a></li>
+            <li><a href="#" class="menu-item" data-target="devolucoes">Devoluções</a></li>
+            <li><a href="#" class="menu-item" data-target="alterar-palavra-passe">Alterar Palavra-passe</a></li>
+            <li>
+                <form id="logoutForm" asp-page="/Account/Logout" method="post">
+                    <a href="javascript:document.getElementById('logoutForm').submit()" class="logout-link">Terminar sessão</a>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <h1>A Minha Conta</h1>
+
+        <!-- Secção de página principal -->
+        <div class="section active-section" id="pagina-principal">
+            <h3>Bem-vindo à tua conta!</h3>
+            <p>Escolhe uma opção do menu à esquerda para ver os detalhes.</p>
+        </div>
+
+        <!-- Secção de dados de contacto -->
+        <div class="section" id="dados-contacto">
+            <h3>Dados de contacto</h3>
+            <form method="post">
+                <div class="input-wrapper">
+                    <label style=" font-size: 14px;">Email: </label>
+                    <input type="email" id="email" name="NewEmail" asp-for="NewEmail" value="@Model.CurrentEmail" class="caixaEditDC"/> <br />
+                </div>
+                
+                <div class="input-wrapper">
+                    <label style=" font-size: 14px;">Phone Number:</label>
+                    <input type="number" id="userphone" name="NewPhoneNumber" asp-for="NewPhoneNumber" value="@Model.CurrentPhoneNumber" class="caixaEditDC" />
+                </div>
+                
+                <div class="action">
+                    <button id="editButton" class="butaoGuardar">Guardar</button>
+                </div>
+            </form>
+            @if (Model.StatusMessage != null)
+            {
+                <div id="statusMessage">
+                    <p>@Model.StatusMessage</p>
+                </div>
+            }
+        </div>
+
+        <!-- Secção de moradas -->
+        <div class="section" id="minhas-moradas">
+            <h3>As Minhas Moradas</h3>
+            <p>Morada Principal: Rua da cruz, nº22, Maia...</p>
+            <div class="action">
+                <a href="#">Editar</a>
+            </div>
+        </div>
+
+        <!-- Secção de encomendas -->
+        <div class="section" id="minhas-encomendas">
+            <h3>As Minhas Encomendas</h3>
+            <p>Tens 2 encomendas.</p>
+            <div class="action">
+                <a href="#">Visualizar</a>
+            </div>
+        </div>
+
+        <!-- Secção de devoluções -->
+        <div class="section" id="devolucoes">
+            <h3>Devoluções</h3>
+            <p>Não há devoluções pendentes no momento.</p>
+            <div class="action">
+                <a href="#">Visualizar histórico de devoluções</a>
+            </div>
+        </div>
+
+        <!-- Secção de alterar palavra-passe -->
+        <div class="section" id="alterar-palavra-passe">
+            <h3>Alterar Palavra-passe</h3>
+            <form method="post">
+                <div class="input-wrapper">
+                    <input type="password" id="password1" name="CurrentPassword" class="caixaEdit" placeholder=" " asp-for="CurrentPassword">
+                    <label for="current-password" class="input-label">Palavra-passe atual:</label>
+                    <button type="button" onclick="togglePasswordVisibility1()" class="passwordViewer">
+                        <i class="fas fa-eye"></i>
+                    </button><br>
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="password" id="password2" name="NewPassword" class="caixaEdit" placeholder=" " asp-for="NewPassword">
+                    <label for="new-password" class="input-label">Nova palavra-passe:</label>
+                    <button type="button" onclick="togglePasswordVisibility2()" class="passwordViewer">
+                        <i class="fas fa-eye"></i>
+                    </button><br>
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="password" id="password3" name="ConfirmPassword" class="caixaEdit" placeholder=" " asp-for="ConfirmPassword">
+                    <label for="confirm-password" class="input-label">Confirmar nova palavra-passe:</label>
+                    <button type="button" onclick="togglePasswordVisibility3()" class="passwordViewer">
+                        <i class="fas fa-eye"></i>
+                    </button><br>
+                </div>
+                
+
+                <button class="butaoGuardar" type="submit" id="changePasswordButton">Alterar Palavra-passe</button>
+            </form>
+            @if (Model.StatusMessage != null)
+            {
+                <div id="statusMessage">
+                    <p>@Model.StatusMessage</p>
+                </div>
+            }
+        </div>
+    </div>
+    </div>
+</body>
+
+<script>// Função para alternar entre as secções
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Esconder todas as secções
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active-section');
+            });
+
+            // Mostrar a secção correspondente ao item clicado
+            const targetSection = document.getElementById(this.getAttribute('data-target'));
+            targetSection.classList.add('active-section');
+        });
+    });
+
+    function togglePasswordVisibility1() {
+        var passwordInput = document.getElementById("password1");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        }
+        else {
+            passwordInput.type = "password";
+        }
+    }
+
+    function togglePasswordVisibility2() {
+        var passwordInput = document.getElementById("password2");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        }
+        else {
+            passwordInput.type = "password";
+        }
+    }
+
+    function togglePasswordVisibility3() {
+        var passwordInput = document.getElementById("password3");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        }
+        else {
+            passwordInput.type = "password";
+        }
+    }
+    </script>
+</html>
