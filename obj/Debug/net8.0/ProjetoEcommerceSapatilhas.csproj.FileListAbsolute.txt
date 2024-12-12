@@ -148,3 +148,4 @@
 /Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/obj/Debug/net8.0/ProjetoEcommerceSapatilhas.csproj.AssemblyReference.cache
 /Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/obj/Debug/net8.0/ProjetoEcommerceSapatilhas.MvcApplicationPartsAssemblyInfo.cs
 /Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/obj/Debug/net8.0/ProjetoE.98324759.Up2Date
+/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/bin/Debug/net8.0/Newtonsoft.Json.dll

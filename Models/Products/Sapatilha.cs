@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ProjetoEcommerceSapatilhas.Models.Products;
 
 [Table("Sapatilhas")] //Nome da tabela vai ser sapatilhas
 public class Sapatilha
@@ -11,15 +12,12 @@ public class Sapatilha
     [MaxLength(100)] // Define o tamanho máximo da string para 100 caracteres
     public string Nome { get; set; }
 
-    [MaxLength(500)] // Define o tamanho máximo da descrição para 500 caracteres
+    [MaxLength(1500)] // Define o tamanho máximo da descrição para 1500 caracteres
     public string Descricao { get; set; }
 
     [Required] // Campo obrigatório
     [MaxLength(50)] // Define o tamanho máximo da marca para 50 caracteres
     public string Marca { get; set; }
-
-    [Range(35, 50)] // Define o tamanho mínimo e máximo para a propriedade 'Tamanho'
-    public int Tamanho { get; set; }
 
     [Column(TypeName = "decimal(18,2)")] // Define que será um decimal com precisão de 18 dígitos e 2 casas decimais
     public decimal Preco { get; set; }
@@ -32,4 +30,7 @@ public class Sapatilha
 
     [Range(0, int.MaxValue)] // Define que o número de visualizações não pode ser negativo
     public int NumeroVisualizacoes { get; set; }
+
+    public virtual ICollection<Tamanho> Tamanhos { get; set; }
+    public virtual ICollection<Avaliacao> Avaliacoes { get; set; }
 }

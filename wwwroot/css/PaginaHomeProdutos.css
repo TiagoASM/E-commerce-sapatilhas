@@ -22,10 +22,15 @@
     text-align: center; 
 }
 
-.produto-imagem{
+    .produto-card:hover{
+        cursor:pointer;
+    }
+
+.produto-imagem {
     width: 100%;
     max-width: 200px;
-    height: auto;
+    height: 150px; /* Define uma altura fixa */
+    object-fit: contain; /* Ajusta a imagem para preencher o espaço */
     margin-bottom: 10px;
 }
 

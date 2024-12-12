@@ -102,7 +102,7 @@ header {
     border-right: 1px solid #eaeaea;
     font-family: 'Poppins', sans-serif;
     height: 100vh; /* Faz com que a sidebar ocupe a altura total da página */
-    position: fixed; /* Mantém a sidebar fixa ao rolar */
+    position: absolute; 
 }
 
     .sidebar h2 {
@@ -147,6 +147,10 @@ header {
     margin-left: 280px; /* Deixando espaço para a sidebar fixa */
     padding: 20px;
     font-family: 'Poppins', sans-serif;
+    flex: 1; /* Faz com que o conteúdo principal cresça para ocupar o espaço restante */
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh; /* Garante que o conteúdo principal ocupe toda a altura da página */
 }
 
 .active-section {

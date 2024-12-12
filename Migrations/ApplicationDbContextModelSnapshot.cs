@@ -224,6 +224,62 @@ namespace ProjetoEcommerceSapatilhas.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("ProjetoEcommerceSapatilhas.Models.Products.Avaliacao", b =>
+                {
+                    b.Property<int>("ReviewID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewID"));
+
+                    b.Property<string>("Comentario")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime>("DataComentario")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Nota")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SapatilhaID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ReviewID");
+
+                    b.HasIndex("SapatilhaID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Avaliacoes");
+                });
+
+            modelBuilder.Entity("ProjetoEcommerceSapatilhas.Models.Products.Tamanho", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("SapatilhaId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TamanhoValor")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SapatilhaId");
+
+                    b.ToTable("Tamanhos");
+                });
+
             modelBuilder.Entity("Sapatilha", b =>
                 {
                     b.Property<int>("ID")
@@ -237,8 +293,8 @@ namespace ProjetoEcommerceSapatilhas.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(1500)
+                        .HasColumnType("nvarchar(1500)");
 
                     b.Property<string>("Imagem")
                         .IsRequired()
@@ -260,9 +316,6 @@ namespace ProjetoEcommerceSapatilhas.Migrations
 
                     b.Property<decimal>("Preco")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("Tamanho")
-                        .HasColumnType("int");
 
                     b.HasKey("ID");
 
@@ -318,6 +371,43 @@ namespace ProjetoEcommerceSapatilhas.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ProjetoEcommerceSapatilhas.Models.Products.Avaliacao", b =>
+                {
+                    b.HasOne("Sapatilha", "Sapatilha")
+                        .WithMany("Avaliacoes")
+                        .HasForeignKey("SapatilhaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sapatilha");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ProjetoEcommerceSapatilhas.Models.Products.Tamanho", b =>
+                {
+                    b.HasOne("Sapatilha", "Sapatilha")
+                        .WithMany("Tamanhos")
+                        .HasForeignKey("SapatilhaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sapatilha");
+                });
+
+            modelBuilder.Entity("Sapatilha", b =>
+                {
+                    b.Navigation("Avaliacoes");
+
+                    b.Navigation("Tamanhos");
                 });
 #pragma warning restore 612, 618
         }

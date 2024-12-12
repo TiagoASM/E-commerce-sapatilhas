@@ -1,0 +1,409 @@
+﻿@page "/SapatilhaDetails/{id:int}"
+@model ProjetoEcommerceSapatilhas.Pages.SapatilhaDetailsModel
+@{
+}
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pisantte - Sneakers </title>
+	<link rel="stylesheet" href="/css/PaginaDetailsSapatilhas.css?v=1.13">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/337cd3854e.js" crossorigin="anonymous"></script>
+</head>
+
+<header>
+	<div class="name">
+		<a href="@Url.Page("/Index")" style="text-decoration: none; color: inherit;">PISANTTE</a>
+	</div>
+	<div class="logotipo">
+		<img src="/Images/Pisantte logo.png" alt="Pisantte logo">
+	</div>
+
+	<div class="ico">
+		<span class="sobre-element-content"><a href="sobre.html">SOBRE NÓS</a></span>
+		<button class="bag">
+			<img src="/Images/Shopping bag.png" alt="Carrinho das Compras">
+		</button>
+		<button src="myicon">
+			<img src="/Images/User.png" alt="User">
+		</button>
+	</div>
+
+</header>
+
+<body>
+	<div class="product-card">
+		<!-- Coluna Esquerda -->
+		<div class="product-left">
+			<div class="product-rating">
+				<div class="rating">
+					<span class="stars">
+
+						@for (int i = 1; i <= 5; i++)
+						{
+							if (i <= Math.Floor(Model.MediaAvaliacoes))
+							{
+								<i class="fas fa-star filled"></i> <!-- Estrela preenchida -->
+							}
+							else if (i - Model.MediaAvaliacoes < 1)
+							{
+								<i class="fas fa-star-half-alt filled"></i> <!-- Meia estrela -->
+							}
+							else
+							{
+								<i class="far fa-star"></i> <!-- Estrela vazia -->
+							}
+						}
+
+
+					</span>
+					<span class="rating-value">(@Model.MediaAvaliacoes.ToString("0.0"))</span>
+				</div>
+			</div>
+			<img src="@Model.Sapatilha.Imagem" alt="Sapatilha" class="product-image" />
+			<div class="product-size">
+				<label for="size">CHOOSE SIZE</label>
+				<div class="size-options">
+
+					@for (decimal tamanho = 35; tamanho <= 44; tamanho += 0.5m)
+					{
+						if (Model.Tamanhos.Contains(tamanho))
+						{
+							<button class="size" onclick="addButton(this)">@(tamanho % 1 == 0 ? tamanho.ToString("0") : tamanho.ToString("0.0"))</button>
+						}
+						else
+						{
+							<button class="size disabled" disabled>@(tamanho % 1 == 0 ? tamanho.ToString("0") : tamanho.ToString("0.0"))</button>
+						}
+
+					}
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Coluna Direita -->
+		<div class="product-right">
+			<p class="product-category">@Model.Sapatilha.Marca</p>
+			<h2 class="product-name">@Model.Sapatilha.Nome</h2>
+			<p class="product-price">@Model.Sapatilha.Preco€</p>
+			<div class="product-description-container">
+				<button class="toggle-description" onclick="toogleDescription()">Ver Mais ↓</button>
+				<p class="product-description">@Model.Sapatilha.Descricao</p>
+
+			</div>
+			<button class="add-to-cart-button">ADD TO CART</button>
+		</div>
+	</div>
+
+	<div class="detalhes-sapatilha">
+		<div class="linha-topo">
+			<p class="avaliacoes-text" id="avaliacoes" onclick="avaliacoesButton()">Avaliações</p>
+			<p class="formas-pagamento" onclick="formasPagamentoBtn()">Formas de pagamento</p>
+			<p class="envio-devolucoes" onclick="envioDevolucoesBtn()">Envio e Devoluções</p>
+		</div>
+
+		<div class="linha-baixo">
+			<div class="avaliacoes-container" id="avaliacoesContainer" style="display : block;">
+
+				@if (!SignInManager.IsSignedIn(User))
+				{
+					<p class="escrever-avaliacao" id="escreverAvaliacao" onclick="avaliacoesLogin()">Escreve uma avaliação</p>
+				}
+				else
+				{
+					<p class="escrever-avaliacao" id="escreverAvaliacao" onclick="modalAvaliacao()">Escreve uma avaliação</p>
+					<div id="commentModal" class="modal">
+						<div class="modal-content">
+							<span class="close-btn" onclick="closeModalAvaliacao()">&times;</span>
+							<h2>Adicionar Comentário</h2>
+
+							<div id="rating-stars" class="rating-stars">
+								<i class="far fa-star" data-value="1"></i>
+								<i class="far fa-star" data-value="2"></i>
+								<i class="far fa-star" data-value="3"></i>
+								<i class="far fa-star" data-value="4"></i>
+								<i class="far fa-star" data-value="5"></i>
+							</div>
+
+							<form id="commentForm" asp-page-handler="AddRating">
+								<input type="hidden" id="nota" name="nota" value="0" />
+								<label for="comentario">Comentário:</label>
+								<textarea id="comentario" name="comentario" rows="4" required></textarea>
+								@if (!Model.VerificacaoAvalicao)
+								{
+									<p style="font-weight:bold">Já fez uma avaliação a esta sapatilha!</p>
+									<button class="disabled-btn" disabled>Enviar</button>
+								}
+								else
+								{
+									<button type="submit" class="submit-btn" id="sendRating">Enviar</button>
+								}
+
+							</form>
+						</div>
+					</div>
+				}
+
+				<div id="avaliacaoContainer">
+					@foreach (var avaliacao in Model.Sapatilha.Avaliacoes)
+					{
+						<div class="avaliacao">
+							<div class="separador"></div>
+							<span class="avaliacao-nome">@avaliacao.User.UserName</span>
+							<span class="avaliacao-estrelas">
+								@for (int i = 1; i <= 5; i++)
+								{
+									if (i <= Math.Floor((double)avaliacao.Nota))
+									{
+										<i class="fas fa-star filled"></i> <!-- Estrela preenchida -->
+									}
+									else if (i - avaliacao.Nota < 1)
+									{
+										<i class="fas fa-star-half-alt filled"></i> <!-- Meia estrela -->
+									}
+									else
+									{
+										<i class="far fa-star"></i> <!-- Estrela vazia -->
+									}
+								}
+							</span>
+							<p>@avaliacao.Comentario</p>
+
+						</div>
+					}
+				</div>
+
+				<button id="verMaisBtn">Ver mais</button>
+			</div>
+
+			<div class="pagamento-container" id="pagamentoContainer" style="display : none;">
+				<h2 style="font-weight: bold">PayPal</h2>
+				<p>Atualmente, aceitamos pagamentos <strong>exclusivamente via PayPal</strong>. O PayPal é uma plataforma segura, rápida e confiável para realizar suas compras online. Ao utilizar a forma de pagamento por PayPal a sua encomenda é aprovada de imedito.</p>
+				<h3 style="font-weight: bold">Razões para escolher o PayPal</h3>
+				<li>O PayPal protege suas informações financeiras com tecnologia de ponta e oferece suporte contra fraudes.</li>
+				<li>Com o PayPal, você pode pagar rapidamente, sem precisar preencher todos os dados do cartão.</li>
+				<li>O PayPal é aceito em mais de 200 países e suporta diversas moedas, tornando-o ideal para compras internacionais.</li>
+			</div>
+
+			<div class="envio-container" id="envioContainer" style="display: none">
+				<h3 style="font-weight: bold">Envio</h3>
+				<li>Enviamos os nossos produtos para todo o território nacional. Os prazos de entrega variam entre <strong>3 a 5 dias úteis</strong>, dependendo da sua localização. Você receberá um número de rastreamento assim que o pedido for despachado.</li>
+				<li>O custo de envio é calculado no momento do checkout e depende do endereço de entrega. Encomendas a cima de 50€ o custo de envio é nulo.</li>
+				<h3 style="font-weight: bold">Devolução</h3>
+				<li>Infelizmente, <strong>não aceitamos devoluções neste momento</strong>. Pedimos que verifique atentamente as informações do produto antes de finalizar a compra. Caso haja algum problema com o produto recebido, entre em contato com o nosso suporte.</li>
+				<p style="margin-top: 10px">Caso tenha dúvidas sobre o envio ou precise de assistência, entre em contato conosco pelo e-mail geral@pisantte.pt.</p>
+			</div>
+
+
+		</div>
+
+	</div>
+
+    <div class="produtos-relacionados">
+        <h3>Também Poderás Gostar De</h3>
+        <div class="produtos-container">
+            @foreach (var produto in Model.Sapatilhas)
+            {
+                <div class="produto" onclick="window.location.href='/SapatilhaDetails/@produto.ID'">
+                    <img src="@produto.Imagem" alt="@produto.Nome">
+                    <h4>@produto.Nome</h4>
+                    <p><strong>@produto.Preco.ToString("F2") €</strong></p>
+                </div>
+            }
+        </div>
+    </div>
+
+	<script>function toogleDescription() {
+			const container = document.querySelector(".product-description-container");
+			const button = document.querySelector(".toggle-description");
+
+			if (container.classList.contains("expanded")) {
+				container.classList.remove("expanded");
+				button.textContent = "Ver Mais ↓";
+			}
+			else {
+				container.classList.add("expanded");
+				button.textContent = "Ver Menos ↑";
+			}
+		}
+
+		function addButton(element) {
+
+			const buttons = document.querySelectorAll('.size');
+
+			// Remove a classe "selected" dos botões
+			buttons.forEach((button) => {
+				button.classList.remove('selected');
+			});
+
+			// Adiciona a classe "selected" ao botão clicado
+			element.classList.add('selected');
+		}
+
+		const avaliacoesContainer = document.getElementById("avaliacoesContainer");
+		const pagamentoContainer = document.getElementById("pagamentoContainer");
+		const envioContainer = document.getElementById("envioContainer");
+		function avaliacoesButton() {
+			
+			if (avaliacoesContainer.style.display === "none") {
+				pagamentoContainer.style.display = "none";
+				envioContainer.style.display = "none";
+				avaliacoesContainer.style.display = "block";
+			}
+
+		
+		}
+
+		
+		function formasPagamentoBtn() {
+			
+			if (pagamentoContainer.style.display === "none") {
+				avaliacoesContainer.style.display = "none";
+				envioContainer.style.display = "none";
+				pagamentoContainer.style.display = "block";
+			}
+
+		}
+
+		function envioDevolucoesBtn() {
+			if (envioContainer.style.display === "none") {
+				pagamentoContainer.style.display = "none";
+				avaliacoesContainer.style.display = "none";
+				envioContainer.style.display = "block";
+			} 
+		}
+
+		function avaliacoesLogin() {
+			window.location.href = "/Account/Login";
+		}
+
+		function modalAvaliacao() {
+			document.getElementById("commentModal").style.display = "block";
+			document.body.classList.add("no-scroll");
+		}
+
+		function closeModalAvaliacao() {
+			document.getElementById("commentModal").style.display = "none";
+			document.body.classList.remove("no-scroll");
+		}
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const stars = document.querySelectorAll("#rating-stars i");
+			const ratingInput = document.getElementById("nota");
+
+			let selectedRating = 0; // Armazena a nota selecionada
+
+			// Função para atualizar as estrelas visualmente com base na nota
+			function updateStars(rating) {
+				stars.forEach((star) => {
+					const starValue = parseInt(star.getAttribute("data-value"), 10);
+					if (starValue <= rating) {
+						star.classList.remove("far"); // Remove borda
+						star.classList.add("fas"); // Adiciona preenchimento
+						star.style.color = "black"; // Preenchimento preto
+					} else {
+						star.classList.remove("fas"); // Remove preenchimento
+						star.classList.add("far"); // Adiciona borda
+						star.style.color = "#ccc"; // Cor cinza para borda
+					}
+				});
+			}
+
+			// Eventos para as estrelas
+			stars.forEach((star) => {
+				// Hover: Preencher até a estrela atual
+				star.addEventListener("mouseover", () => {
+					const rating = parseInt(star.getAttribute("data-value"), 10);
+					updateStars(rating);
+				});
+
+				// Mouseout: Restaurar o estado selecionado
+				star.addEventListener("mouseout", () => {
+					updateStars(selectedRating); // Restaura o estado das estrelas clicadas
+				});
+
+				// Clique: Define a nota e fixa o estado
+				star.addEventListener("click", () => {
+					selectedRating = parseInt(star.getAttribute("data-value"), 10);
+					updateStars(selectedRating);
+				});
+			});
+
+			document.getElementById("sendRating").addEventListener("click", function () {
+				const comentario = document.getElementById("comentario").value;
+				const nota = selectedRating;
+
+				if (!nota) {
+					alert("Por favor, selecione uma nota!");
+					return;
+				}
+
+				if (!comentario) {
+					alert("Por favor, escreva um comentário!");
+					return;
+				}
+
+				// Atualiza o valor do input hidden
+				document.getElementById("nota").value = nota;
+			});
+
+
+		});
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const butaoVerMais = document.getElementById("verMaisBtn");
+			const avaliacoes = document.querySelectorAll(".avaliacao");
+			let avaliacoesVisiveis = 3;
+			if (avaliacoes.length === 0) {
+				verMaisBtn.style.display = "none";
+			}
+
+			avaliacoes.forEach((avaliacao, index) => {
+				if (index < avaliacoesVisiveis) {
+					avaliacao.style.display = "block";
+				}
+				else {
+					avaliacao.style.display = "none";
+				}
+			});
+
+
+			butaoVerMais.addEventListener("click", function () {
+				const totalAvaliacoes = avaliacoes.length;
+				
+
+				for (let i = avaliacoesVisiveis; i < avaliacoesVisiveis + 3 && i < totalAvaliacoes; i++) {
+					if (avaliacoes[i]) {
+						avaliacoes[i].style.display = "block";
+					}
+				}
+
+				avaliacoesVisiveis += 3;
+
+				if (avaliacoesVisiveis >= totalAvaliacoes) {
+					verMaisBtn.style.display = "none";
+				}
+
+				console.log(totalAvaliacoes);
+			});
+		});
+
+
+
+	</script>
+</body>
+</html>
+

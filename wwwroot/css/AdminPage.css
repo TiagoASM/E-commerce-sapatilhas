@@ -258,3 +258,159 @@ input, textarea {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+/* Estilo para o card de cada sapatilha */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+    .card:hover {
+        transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    }
+
+.card-img-top {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o botão de remover */
+.card-body .btn {
+    width: 100%;
+}
+
+/* Grid de imagens no modal */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.col-md-3 {
+    flex: 1 1 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+}
+
+.product-card {
+    width: 150px; /* Define uma largura próxima de um quadrado */
+    height: 180px; /* Define uma altura para ficar mais quadrado */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.3s;
+}
+
+    .product-card.selected {
+        border-color: #007bff; /* Borda azul quando o item é selecionado */
+        background-color: #f0f8ff; /* Leve cor de fundo para dar destaque */
+    }
+
+    .product-card img {
+        width: 100%; /* Garante que a imagem ocupe toda a largura */
+        height: auto; /* Mantém a proporção da imagem */
+        object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível */
+        border-radius: 5px;
+        margin-bottom: 10px; /* Espaço entre a imagem e o nome */
+    }
+
+    .product-card p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .user-container:hover{
+        cursor:pointer;
+    }
+
+.user-header,
+.user-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+    .user-item.selected{
+        border-bottom-color: #007bff;
+    }
+
+.username-span {
+    flex: 1;
+    text-align: left;
+}
+
+.email-span {
+    flex: 2;
+    text-align: left;
+}
+
+.numerotelemovel-span {
+    flex: 1;
+    text-align: left;
+}
+
+.separator {
+    margin: 0 10px;
+}
+
+.modal-footerUtilizador {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+    .modal-footerUtilizador.show{
+        opacity: 1;
+        height: 50px;
+    }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .col-md-3 {
+        flex: 1 1 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-3 {
+        flex: 1 1 calc(100% - 15px);
+        max-width: calc(100% - 15px);
+    }
+}

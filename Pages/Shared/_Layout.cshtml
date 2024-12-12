@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - ProjetoEcommerceSapatilhas</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/Footer.css" />
     <link rel="stylesheet" href="~/ProjetoEcommerceSapatilhas.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -15,11 +16,46 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container-fluid">
-            &copy; 2024 - ProjetoEcommerceSapatilhas - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+    <div class="footer-wrapper">
+        <footer class="footer">
+            <div class="footer-section">
+                <h3>APOIO AO CLIENTE</h3>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Livro de Reclamações</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos e Condições</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>SITE MAP</h3>
+                <ul>
+                    <li><a href="#">Sneakers</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Minha Conta</a></li>
+                </ul>
+                <img src="/Images/port.png" alt="portugal">
+            </div>
+
+            <div class="footer-section">
+                <h3>CONTACTOS DIRETOS</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="mailto:geral@pisantte.pt">geral@pisantte.pt</a></li>
+                </ul>
+                <h3>MÉTODOS DE ENTREGA</h3>
+                <img src="/Images/ctt.png" alt="CTT">
+                <img src="/Images/dhl-logo 1.png" alt="DHL">
+            </div>
+
+            <div class="footer-section">
+                <h3>MÉTODOS DE PAGAMENTO</h3>
+                <img src="/Images/paypal.png" alt="PayPal">
+            </div>
+        </footer>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

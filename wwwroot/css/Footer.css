@@ -1,0 +1,86 @@
+﻿/* Container arredondado do footer */
+.footer-wrapper {
+    background-color: #000;
+    overflow: hidden;
+    width: 100vw; /* Usa largura da viewport */
+    margin: 0; /* Remove qualquer margem ao redor */
+    margin-top: 90px;
+    padding: 0;
+    position: relative; /* Garante alinhamento com a viewport */
+    left: 0; /* Força o footer a alinhar-se à esquerda */
+}
+
+/* Estilo do footer */
+.footer {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-family: 'Inter', sans-serif;
+    max-width: 1920px; /* Define uma largura máxima */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Cada seção do footer */
+.footer-section {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px; /* Espaço horizontal entre seções */
+}
+
+    /* Títulos do footer */
+    .footer-section h3 {
+        font-family: 'Franklin Gothic Demi', sans-serif;
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 20px; /* Mais espaço abaixo do título */
+    }
+
+    /* Links e lista */
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .footer-section ul li {
+            margin-bottom: 12px; /* Espaçamento maior entre itens da lista */
+        }
+
+            .footer-section ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-family: 'Inter', sans-serif;
+            }
+
+                .footer-section ul li a:hover {
+                    color: #ccc;
+                }
+
+    /* Ícones de entrega e pagamento */
+    .footer-section img {
+        width: 60px; /* Tamanho para as imagens de entrega */
+        height: auto; /* Mantém a proporção da imagem */
+        margin: 10px 5px; /* Espaçamento em volta das imagens */
+    }
+
+    /* Ícones do site map - ajuste o tamanho conforme necessário */
+    .footer-section:nth-child(2) img {
+        width: 40px; /* Defina a largura desejada para as imagens do site map */
+        height: auto; /* Mantém a proporção da imagem */
+        margin: 10px; /* Espaçamento em volta das imagens */
+    }
+
+    /* Linha separadora entre seções */
+    .footer-section:not(:last-child) {
+        border-right: 1px solid #444;
+    }
+
+    /* Ícones do site map - ajuste para tamanho uniforme */
+    .footer-section:nth-child(2) img {
+        width: 30px; /* Defina uma largura uniforme para as bandeiras */
+        height: 20px; /* Defina uma altura uniforme para as bandeiras */
+        margin: 10px 5px 0px 5px; /* Espaçamento horizontal entre as bandeiras */
+        vertical-align: middle; /* Alinha as imagens verticalmente ao centro */
+        display: inline-block; /* Exibe as imagens em linha */
+    }

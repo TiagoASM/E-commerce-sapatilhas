@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets/ProjetoEcommerceSapatilhas.bundle.scp.css"
     },
     {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/149a24fb-2a13-4cd8-b0d4-8524cc31f251.png",
+      "PackagePath": "staticwebassets/Images/149a24fb-2a13-4cd8-b0d4-8524cc31f251.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/1f32ba0d-8a70-457c-8349-54d1dde24607.png",
+      "PackagePath": "staticwebassets/Images/1f32ba0d-8a70-457c-8349-54d1dde24607.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/6ea71a22-652b-4050-b491-6843c9bc7520.png",
+      "PackagePath": "staticwebassets/Images/6ea71a22-652b-4050-b491-6843c9bc7520.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/8bbb8caa-52d8-4805-8d3b-4502d290d61e.png",
+      "PackagePath": "staticwebassets/Images/8bbb8caa-52d8-4805-8d3b-4502d290d61e.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/9090abf6-f460-4eee-ba01-1b3ff1037655.png",
+      "PackagePath": "staticwebassets/Images/9090abf6-f460-4eee-ba01-1b3ff1037655.png"
+    },
+    {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/Pisantte logo.png",
       "PackagePath": "staticwebassets/Images/Pisantte logo.png"
     },
@@ -21,20 +41,36 @@
       "PackagePath": "staticwebassets/Images/User.png"
     },
     {
-      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/airjorda4.png",
-      "PackagePath": "staticwebassets/Images/airjorda4.png"
-    },
-    {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/airjordalow.png",
       "PackagePath": "staticwebassets/Images/airjordalow.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/ca5ac787-5511-4246-8ce6-89eacfb20b44.png",
+      "PackagePath": "staticwebassets/Images/ca5ac787-5511-4246-8ce6-89eacfb20b44.png"
     },
     {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/chinelosyeezy.png",
       "PackagePath": "staticwebassets/Images/chinelosyeezy.png"
     },
     {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/ctt.png",
+      "PackagePath": "staticwebassets/Images/ctt.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/d8e045e2-13e7-49d1-9653-1d29d772fab3.png",
+      "PackagePath": "staticwebassets/Images/d8e045e2-13e7-49d1-9653-1d29d772fab3.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/dhl-logo 1.png",
+      "PackagePath": "staticwebassets/Images/dhl-logo 1.png"
+    },
+    {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/dunktravis.png",
       "PackagePath": "staticwebassets/Images/dunktravis.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/fe939083-3e52-4a06-af9f-755d580bb862.png",
+      "PackagePath": "staticwebassets/Images/fe939083-3e52-4a06-af9f-755d580bb862.png"
     },
     {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/gazelle indoor.png",
@@ -53,10 +89,6 @@
       "PackagePath": "staticwebassets/Images/nikeairforce.png"
     },
     {
-      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/nikedunkPanda.png",
-      "PackagePath": "staticwebassets/Images/nikedunkPanda.png"
-    },
-    {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/paginaP1.png",
       "PackagePath": "staticwebassets/Images/paginaP1.png"
     },
@@ -67,6 +99,14 @@
     {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/paginaP3.png",
       "PackagePath": "staticwebassets/Images/paginaP3.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/paypal.png",
+      "PackagePath": "staticwebassets/Images/paypal.png"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/port.png",
+      "PackagePath": "staticwebassets/Images/port.png"
     },
     {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/Images/yeezy350x.png",
@@ -81,6 +121,10 @@
       "PackagePath": "staticwebassets/css/AdminPage.css"
     },
     {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/Footer.css",
+      "PackagePath": "staticwebassets/css/Footer.css"
+    },
+    {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/Home.css",
       "PackagePath": "staticwebassets/css/Home.css"
     },
@@ -91,6 +135,10 @@
     {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/Logout.css",
       "PackagePath": "staticwebassets/css/Logout.css"
+    },
+    {
+      "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/PaginaDetailsSapatilhas.css",
+      "PackagePath": "staticwebassets/css/PaginaDetailsSapatilhas.css"
     },
     {
       "Id": "/Users/macbookpro/Projects/ProjetoEcommerceSapatilhas/ProjetoEcommerceSapatilhas/wwwroot/css/PaginaHomeProdutos.css",

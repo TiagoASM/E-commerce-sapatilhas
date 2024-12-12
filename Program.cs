@@ -40,3 +40,10 @@ app.MapRazorPages();
 
 app.Run();
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapRazorPages();
+    endpoints.MapControllers();
+    endpoints.MapDefaultControllerRoute();
+});
+

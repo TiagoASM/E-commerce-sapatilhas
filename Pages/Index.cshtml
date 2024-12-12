@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pisantte - Loja Virtual</title>
     <link rel="stylesheet" href="/css/Home.css?v=1.1">
-    <link rel="stylesheet" href="/css/PaginaHomeProdutos.css?v=1.1">
+    <link rel="stylesheet" href="/css/PaginaHomeProdutos.css?v=1.3">
     <link rel="stylesheet" href="/css/Logout.css?v=1.1">
     <link rel="stylesheet" href="/css/Admin.css?v=1.1"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,900&display=swap" rel="stylesheet">
@@ -142,6 +142,7 @@
     <script src="/js/ImageScrolling.js"></script>
 
     <!-- Seção Mais Vendidos -->
+
     <!--Novidades-->
     <section class="novidades-section">
         <h2 class="novidades-titulo">Novidades</h2>
@@ -150,7 +151,7 @@
             {
                 foreach (var sapatilha in Model.SapatilhasRecentes)
                 {
-                    <div class="produto-card">
+                    <div class="produto-card" onclick="window.location.href='/SapatilhaDetails/@sapatilha.ID'">
                         <img src="@sapatilha.Imagem" alt="@sapatilha.Nome" class="produto-imagem" />
                         <h3 class="produto-nome">@sapatilha.Nome</h3>
                         <p class="produto-preco">@sapatilha.Preco€</p>

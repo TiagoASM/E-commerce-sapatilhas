@@ -1,0 +1,470 @@
+﻿
+/* Estilos gerais do header */
+header {
+    background-color: #fff;
+    padding: 40px 0; /* Mantido para descer os elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+/* Nome da marca */
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 10px; /* Ajuste para mover o nome mais para baixo */
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Logotipo centralizado e aumentado */
+.logotipo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    .logotipo img {
+        height: 100px; /* Mantido em 100px */
+    }
+
+/* Seção direita: Sobre Nós + Ícones */
+.ico {
+    display: flex;
+    align-items: center;
+    margin-right: 25px; /* Ajuste para evitar que fique colado à lateral */
+}
+
+/* Espaçamento maior entre os itens à direita */
+.sobre-element-content {
+    margin-right: 15px; /* Mantido o espaçamento entre "SOBRE NÓS" e os ícones */
+}
+
+    .sobre-element-content a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-family: 'Jockey One', sans-serif; /* Fonte Jockey One */
+    }
+
+        .sobre-element-content a:hover {
+            color: blue; /* Muda a cor para azul quando o mouse está em cima */
+        }
+
+
+/* Espaçamento entre os ícones */
+.ico button {
+    margin-left: 18px; /* Mantido o espaçamento entre os ícones */
+    background: none; /* Remove fundo do botão */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+/* Ícones de Font Awesome */
+.ico img {
+    width: 24px; /* Ajuste para definir o tamanho do ícone */
+    height: 24px; /* Ajuste para definir o tamanho do ícone */
+    background: none; /* Remove fundo do botão */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+/* Layout Principal */
+.product-card {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    /* Sombras na parte superior e inferior */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), /* Sombra inferior */
+    0 -6px 10px rgba(0, 0, 0, 0.035); /* Sombra superior */
+    position: relative; /* Necessário para sombras precisas */
+}
+
+/* Coluna Esquerda */
+.product-left {
+    display: flex;
+    flex-direction: column; /* Alinha imagem e tamanhos em coluna */
+    gap: 20px; /* Espaço entre a imagem e os tamanhos */
+    flex: 1; /* Garante que a coluna esquerda ocupe espaço proporcional */
+}
+
+/* Imagem */
+.product-image {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 500px; /* Limita a largura máxima */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Escolha de Tamanhos */
+.product-size {
+    text-align: center; /* Centraliza os tamanhos */
+}
+
+    .product-size label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #666;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+.size-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite quebrar os botões em várias linhas */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
+.size {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+    .size:hover {
+        border-color: black;
+        background-color: white;
+        color: black;
+    }
+
+    .size.selected {
+        border-color: black;
+        background-color: white;
+        color: black;
+    }
+
+    .size.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+
+
+/* Coluna Direita */
+.product-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha os elementos ao topo */
+    flex: 1; /* Garante que a coluna direita ocupe espaço proporcional */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Título, Categoria e Preço */
+.product-category {
+    font-size: 12px;
+    font-weight: 600;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* Descrição */
+.product-description-container {
+    position: relative;
+    max-height: 380px; /* Altura do texto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: max-height 0.3s ease;
+}
+
+    .product-description-container.expanded {
+        max-height: none; /* Mostra todo o texto ao expandir */
+    }
+
+.product-description {
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.toggle-description {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: right; /* Garante que o texto fique alinhado à direita */
+    display: block; /* Garante que o botão ocupe uma linha própria */
+    margin-left: auto; /* Empurra o botão para a direita */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+    .toggle-description:hover {
+        color: #999;
+    }
+
+.product-description-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f9f9f9);
+    display: block;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.product-description-container.expanded::after {
+    opacity: 0; /* Remove a sombra ao expandir */
+}
+
+/* Botão Adicionar ao Carrinho */
+.add-to-cart-button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+    .add-to-cart-button:hover {
+        background-color: #999;
+    }
+
+.detalhes-sapatilha {
+    max-width: 1000px; /* Mesmo tamanho do product-card */
+    margin: 30px auto; /* Centraliza como o product-card */
+    font-family: 'Poppins', sans-serif; /* Para uniformidade */
+}
+
+.linha-topo p{
+    display: inline-block;
+    margin-right: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+    .linha-topo p::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -0.5px; /* Coloca a linha exatamente debaixo do texto */
+        left: 0;
+        background-color: black;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .linha-topo p:hover::after {
+        width: 100%; /* Expande o sublinhado debaixo do texto */
+    }
+
+    .escrever-avaliacao{
+        text-decoration:underline;
+        cursor:pointer;
+    }
+
+/* Estilos gerais do modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1000; /* Sempre acima do resto */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    margin: 8% auto; /* Centraliza o modal */
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Largura do modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão para fechar */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+    }
+
+h2 {
+    margin-top: 0;
+}
+
+/* Botão de enviar */
+.submit-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+    .submit-btn:hover {
+        background-color: #999;
+    }
+
+.disabled-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: not-allowed;
+    margin-top: 10px;
+    color: white;
+}
+
+textarea,
+select {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+    textarea:focus,
+    select:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+    .rating-stars i {
+        font-size: 30px;
+        transition: color 0.3s ease;
+        color: #ccc;
+    }
+
+.no-scroll{
+    overflow:hidden;
+    height: 100vh;
+}
+
+.separador {
+    border-top: 1px solid #ccc; /* Linha superior */
+    margin: 20px 0; /* Espaçamento em cima e embaixo */
+    width: 100%; /* Ocupar toda a largura */
+}
+
+#verMaisBtn {
+    padding: 0;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+    #verMaisBtn:hover {
+        color: #999;
+    }
+
+.produtos-relacionados {
+    margin-top: 70px;
+    margin: 50px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+    .produtos-relacionados h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        margin-left: 50px;
+        margin-top: 125px;
+        font-weight: bold;
+    }
+
+.produtos-container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre os cartões */
+    flex-wrap: wrap; /* Permite quebra de linha se os itens não couberem */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+.produto {
+    flex: 0 0 30%; /* Define que cada produto ocupa 30% da largura */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+    .produto img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        height: 200px; /* Define uma altura fixa */
+        object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+        width: 65%; /* Preenche a largura do container */
+    }
+
+    .produto h4 {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .produto p {
+        font-size: 0.9rem;
+        color: #666;
+        margin: 5px 0;
+    }
+
+    .produto:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+

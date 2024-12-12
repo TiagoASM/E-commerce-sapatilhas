@@ -6,185 +6,341 @@
 <!DOCTYPE html>
 <html lang="pt-PT ">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="/CSS/AdminPage.css?v=1.2">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/337cd3854e.js" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin</title>
+	<link rel="stylesheet" href="/CSS/AdminPage.css?v=1.6">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/337cd3854e.js" crossorigin="anonymous"></script>
 </head>
 <style>
-    /* Ocultar todas as secções inicialmente */
-    .section {
-        display: none;
-    }
+	/* Ocultar todas as secções inicialmente */
+	.section {
+		display: none;
+	}
 
-    /* Exibir a secção ativa */
-    .active-section {
-        display: block;
-    }
+	/* Exibir a secção ativa */
+	.active-section {
+		display: block;
+	}
 
 
 
-    /* Estilos adicionais podem ir aqui */
+	/* Estilos adicionais podem ir aqui */
 </style>
 <header>
-    <div class="name">
-        <a href="@Url.Page("/Index")" style="text-decoration: none; color: inherit;">PISANTTE</a>
-    </div>
-    <div class="logotipo">
-        <img src="/Images/Pisantte logo.png" alt="Pisantte logo">
-    </div>
+	<div class="name">
+		<a href="@Url.Page("/Index")" style="text-decoration: none; color: inherit;">PISANTTE</a>
+	</div>
+	<div class="logotipo">
+		<img src="/Images/Pisantte logo.png" alt="Pisantte logo">
+	</div>
 
-    <div class="ico">
-        <span class="sobre-element-content"><a href="#">SOBRE NÓS</a></span>
-        <button class="bag">
-            <img src="/Images/Shopping bag.png" alt="Carrinho das Compras">
-        </button>
-        <button src="myicon">
-            <img src="/Images/User.png" alt="User">
-        </button>
-    </div>
+	<div class="ico">
+		<span class="sobre-element-content"><a href="#">SOBRE NÓS</a></span>
+		<button class="bag">
+			<img src="/Images/Shopping bag.png" alt="Carrinho das Compras">
+		</button>
+		<button src="myicon">
+			<img src="/Images/User.png" alt="User">
+		</button>
+	</div>
 
 </header>
 <body>
-    <!-- Sidebar do Admin -->
-    <div class="admin-container">
-        <div class="sidebar">
-            <h2>Administração</h2>
-            <ul>
-                <li><a href="#" class="menu-item" data-target="gerir-utilizadores">Gerir Utilizadores</a></li>
-                <li><a href="#" class="menu-item" data-target="gerir-produtos">Gerir Produtos</a></li>
-                <li><a href="#" class="menu-item" data-target="pedidos">Pedidos</a></li>
-                <li><a href="#" class="menu-item" data-target="devolucoes">Devoluções</a></li>
-                <li>
-                    <form id="logoutForm" asp-page="/Account/Logout" method="post">
-                        <a href="javascript:document.getElementById('logoutForm').submit()" class="logout-link">Terminar sessão</a>
-                    </form>
-                </li>
-            </ul>
-        </div>
+	<!-- Sidebar do Admin -->
+	<div class="admin-container">
+		<div class="sidebar">
+			<h2>Administração</h2>
+			<ul>
+				<li><a href="#" class="menu-item" data-target="gerir-utilizadores">Gerir Utilizadores</a></li>
+				<li><a href="#" class="menu-item" data-target="gerir-produtos">Gerir Produtos</a></li>
+				<li><a href="#" class="menu-item" data-target="pedidos">Pedidos</a></li>
+				<li><a href="#" class="menu-item" data-target="devolucoes">Devoluções</a></li>
+				<li>
+					<form id="logoutForm" asp-page="/Account/Logout" method="post">
+						<a href="javascript:document.getElementById('logoutForm').submit()" class="logout-link">Terminar sessão</a>
+					</form>
+				</li>
+			</ul>
+		</div>
 
-        <!-- Conteúdo principal -->
-        <div class="content">
-            <h1>Painel de Administração</h1>
+		<!-- Conteúdo principal -->
+		<div class="content">
+			<h1>Painel de Administração</h1>
 
-            <!-- Secção Gerir Utilizadores -->
-            <div class="section active-section" id="gerir-utilizadores">
-                <h3>Gerir Utilizadores</h3>
-                <p>Aqui pode adicionar, editar ou remover utilizadores.</p>
-                <div class="action">
-                    <a href="#">Adicionar novo utilizador</a>
-                </div>
-            </div>
+			<!-- Secção Gerir Utilizadores -->
+			<div class="section active-section" id="gerir-utilizadores">
+				<h3>Gerir Utilizadores</h3>
+				<p>Remover utilizadores.</p>
+				<div class="action">
+					<button class="btn btn-primary" id="openModalUtilizadores" onclick="openModalUtilizadores()">Remover utilizador</button>
+				</div>
+			</div>
 
-            <!-- Secção Gerir Produtos -->
-            <div class="section" id="gerir-produtos">
-                <h3>Gerir Produtos</h3>
-                <p>Aqui pode adicionar, editar ou remover produtos.</p>
-                <div class="action">
-                    <button class="btn btn-primary" id="openModalBtn" onclick="openModal()">Adicionar Produto</button>
-                </div>
-            </div>
+			<!--Modal Utilizadores-->
+			<div class="modal-overlay" id="modalOverlayUtilizadores">
+				<div class="modal">
+					<div class="modal-header">
+						<h2>Remover Utilizador</h2>
+						<span class="close" onclick="closeModalUtilizadores()">&times;</span>
+					</div>
+                    <div class="user-container">
+                        @if (Model.Users != null && Model.Users.Any())
+                        {
+                            @foreach (var user in Model.Users)
+                            {
+                                <div class="user-item" onclick="toogleSelectionUtilizadores('@user.Id', this)">
+                                    <span class="username-span">@user.UserName</span>
+                                    <span class="separator"> | </span>
+                                    <span class="email-span">@user.Email</span>
+                                    <span class="separator"> | </span>
+                                    <span class="numerotelemovel-span">@user.PhoneNumber</span>
+                                </div>
+                            }
+                        }
 
-            <!--PoP-Up (Modal) -->
-            <div class="modal-overlay" id="modalOverlay">
-                <div class="modal">
-                    <div class="modal-header">
-                        <h2>Adicionar Produto</h2>
-                        <span class="close" onclick="closeModal()">&times;</span>
-                    </div>
-                    <form id="produtoForm">
-                        <input type="text" placeholder="Nome do produto" id="nomeProduto" required />
-                        <textarea placeholder="Descrição do produto" id="descricaoProduto" rows="5" required></textarea>
-                        <input type="text" placeholder="Marca" id="marcaProduto" required />
-                        <input type="number" placeholder="Tamanho" id="tamanhoSapatilha" required />
-                        <input type="number" placeholder="Preço" id="precoProduto" required />
-                        <input type="file" id="imagemProduto" required />
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
-                            <button type="submit" class="btn btn-primary">Salvar</button>
+
+                        <form method="post" asp-page-handler="RemoverUtilizadores" id="removeUtilizadores">
+                            <input type="hidden" name="utilizadoresIds" id="utilizadoresIdsInput" />
+                        </form>
+
+                        <div class="modal-footerUtilizador" id="modal-footerUtilizador">
+                            <button class="btn btn-danger btn-sm" onclick="submitUtilizadoresForm()">Eliminar</button>
                         </div>
-                    </form>
-                </div>
-            </div>
+                    </div>
+				</div>
+			</div>
+
+			<!-- Secção Gerir Produtos -->
+			<div class="section" id="gerir-produtos">
+				<h3>Gerir Produtos</h3>
+				<p>Aqui pode adicionar ou remover produtos.</p>
+				<div class="action">
+					<button class="btn btn-primary" id="openModalBtn" onclick="openModal()">Adicionar Produto</button> <br />
+					<button class="btn btn-danger btn-sm" id="openModalDelitBtn" onclick="openModalDelete()" style="margin-top: 20px">Eliminar Produto</button>
+				</div>
+			</div>
+
+			<!--PoP-Up (Modal) Adicionar Produto -->
+			<div class="modal-overlay" id="modalOverlay">
+				<div class="modal">
+					<div class="modal-header">
+						<h2>Adicionar Produto</h2>
+						<span class="close" onclick="closeModal()">&times;</span>
+					</div>
+					<form id="produtoForm" method="post" enctype="multipart/form-data">
+						<input type="text" placeholder="Nome do produto" id="nomeProduto" asp-for="Sapatilha.Nome" required />
+						<textarea placeholder="Descrição do produto" id="descricaoProduto" rows="5" asp-for="Sapatilha.Descricao" required></textarea>
+						<input type="text" placeholder="Marca" id="marcaProduto" asp-for="Sapatilha.Marca" required />
+						<input type="text" placeholder="Tamanho" id="tamanhoProduto" name="tamanhos" required />
+						<input type="number" placeholder="Preço" id="precoProduto" asp-for="Sapatilha.Preco" required />
+						<input type="file" id="imagemProduto" asp-for="ImagemUpload" required />
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+							<button type="submit" class="btn btn-primary">Salvar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!--Pop-Up (Modal) Eliminar Produto-->
+			<div class="modal-overlay" id="modalOverlayDelete">
+				<div class="modal">
+					<div class="modal-header">
+						<h2>Eliminar Produto</h2>
+						<span class="close" onclick="closeModalDelete()">&times;</span>
+					</div>
+					<div class="row">
+						@if (Model.SapatilhasList != null)
+						{
+							foreach (var sapatilha in Model.SapatilhasList)
+							{
+								<div class="col-md-3 product-card" onclick="toggleSelection(@sapatilha.ID, this)">
+									<div class="card">
+										<img src="@sapatilha.Imagem" class="card-img-top" alt="@sapatilha.Nome" />
+										<div class="card-body text-center">
+											<h6 class="card-title">@sapatilha.Nome</h6>
+
+										</div>
+									</div>
+								</div>
+							}
+						}
+					</div>
+
+					<form id="removeForm" method="post" asp-page-handler="RemoverProdutos">
+						<input type="hidden" name="productIds" id="productIdsInput" />
+					</form>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" onclick="closeModalDelete()">Cancelar</button>
+						<button type="submit" class="btn btn-danger btn-sm" onclick="submitRemoveForm()">Remover</button>
+					</div>
+				</div>
+			</div>
 
 
-            <!-- Secção Pedidos -->
-            <div class="section" id="pedidos">
-                <h3>Pedidos</h3>
-                <p>Aqui pode visualizar e gerir todos os pedidos.</p>
-                <div class="action">
-                    <a href="#">Ver detalhes do pedido</a>
-                </div>
-            </div>
+			<!-- Secção Pedidos -->
+			<div class="section" id="pedidos">
+				<h3>Pedidos</h3>
+				<p>Aqui pode visualizar e gerir todos os pedidos.</p>
+				<div class="action">
+					<a href="#">Ver detalhes do pedido</a>
+				</div>
+			</div>
 
-            <!-- Secção Devoluções -->
-            <div class="section" id="devolucoes">
-                <h3>Devoluções</h3>
-                <p>Aqui pode gerir as devoluções feitas pelos clientes.</p>
-                <div class="action">
-                    <a href="#">Ver histórico de devoluções</a>
-                </div>
-            </div>
+			<!-- Secção Devoluções -->
+			<div class="section" id="devolucoes">
+				<h3>Devoluções</h3>
+				<p>Aqui pode gerir as devoluções feitas pelos clientes.</p>
+				<div class="action">
+					<a href="#">Ver histórico de devoluções</a>
+				</div>
+			</div>
 
-        </div>
-    </div>
+		</div>
+	</div>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>Administração © 2024</p>
-    </footer>
+	<!-- Rodapé -->
+	<footer>
+		<p>Administração © 2024</p>
+	</footer>
+
 </body>
+
 <script>onclick// Função para alternar entre as secções
-    document.querySelectorAll('.menu-item').forEach(item => {
-        item.addEventListener('click', function (event) {
-            event.preventDefault();
+	document.querySelectorAll('.menu-item').forEach(item => {
+		item.addEventListener('click', function (event) {
+			event.preventDefault();
 
-            // Esconder todas as secções
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active-section');
-            });
+			// Esconder todas as secções
+			document.querySelectorAll('.section').forEach(section => {
+				section.classList.remove('active-section');
+			});
 
-            // Mostrar a secção correspondente ao item clicado
-            const targetSection = document.getElementById(this.getAttribute('data-target'));
-            targetSection.classList.add('active-section');
-        });
-    });
+			// Mostrar a secção correspondente ao item clicado
+			const targetSection = document.getElementById(this.getAttribute('data-target'));
+			targetSection.classList.add('active-section');
+		});
+	});
 
-    // Seleciona o overlay e o botão de abrir o modal
-    const modalOverlay = document.getElementById("modalOverlay");
-    const openModalBtn = document.getElementById("openModalBtn");
+	// Seleciona o overlay e o botão de abrir o modal
+	const modalOverlay = document.getElementById("modalOverlay");
+	const openModalBtn = document.getElementById("openModalBtn");
 
 
-    // Abre o modal
-    function openModal() {
-        modalOverlay.style.display = "flex";
-    }
+	// Abre o modal
+	function openModal() {
+		modalOverlay.style.display = "flex";
+	}
 
-    // Fecha o modal
-    function closeModal() {
-        modalOverlay.style.display = "none";
-    }
+	// Fecha o modal
+	function closeModal() {
+		modalOverlay.style.display = "none";
+	}
 
-    // Fecha o modal ao clicar fora da área de conteúdo
-    window.onclick = function (event) {
-        if (event.target == modalOverlay) {
-            closeModal();
-        }
-    }
+	// Fecha o modal ao clicar fora da área de conteúdo
+	window.onclick = function (event) {
+		if (event.target == modalOverlay) {
+			closeModal();
+		}
 
-    // Captura o evento de envio do formulário
-    document.getElementById("produtoForm").onsubmit = function (event) {
-        event.preventDefault(); // Evita o envio padrão do formulário
-        alert("Produto salvo com sucesso!");
-        closeModal(); // Fecha o modal após o envio
-    }
+		if (event.target == modalOverlayDelete) {
+			closeModalDelete();
+		}
+	}
 
+	const modalOverlayDelete = document.getElementById("modalOverlayDelete");
+
+	function openModalDelete() {
+		modalOverlayDelete.style.display = "flex";
+	}
+
+	// Fecha o modal
+	function closeModalDelete() {
+		modalOverlayDelete.style.display = "none";
+	}
+
+	//Eliminar produto
+	let selectedProducts = []; // Armazena os IDs dos produtos selecionados
+
+	function toggleSelection(productId, card) {
+
+		// Verifica se o produto já está selecionado
+		if (selectedProducts.includes(productId)) {
+			// Remove o produto do array de selecionados
+			selectedProducts = selectedProducts.filter(id => id !== productId);
+			// Remove a classe 'selected' para atualizar o estilo
+			card.classList.remove("selected");
+		} else {
+			// Adiciona o produto ao array de selecionados
+			selectedProducts.push(productId);
+			// Adiciona a classe 'selected' para atualizar o estilo
+			card.classList.add("selected");
+		}
+
+		console.log("Produtos selecionados após o toggle:", selectedProducts);
+		document.getElementById("productIdsInput").value = selectedProducts.join(',');
+
+	}
+
+	function submitRemoveForm() {
+		if (selectedProducts.length === 0) {
+			alert("Nenhum produto selecionado para remover.");
+			return;
+		}
+
+		document.getElementById("removeForm").submit();
+
+	}
+
+
+	//Modal dos utilizadores
+	const modalOverlayUtilizadores = document.getElementById("modalOverlayUtilizadores")
+
+	function openModalUtilizadores() {
+		modalOverlayUtilizadores.style.display = "flex";
+		
+	}
+
+	function closeModalUtilizadores() {
+		modalOverlayUtilizadores.style.display = "none";
+	}
+
+	let selectedUsers = [];
+	const butaoEliminarShow = document.getElementById("modal-footerUtilizador")
+
+	function toogleSelectionUtilizadores(utilizadorID, userItem) {
+		if (selectedUsers.includes(utilizadorID)) {
+			selectedUsers = selectedUsers.filter(id => id != utilizadorID);
+			userItem.classList.remove("selected");
+		}
+		else {
+			selectedUsers.push(utilizadorID);
+			userItem.classList.add("selected");
+		}
+
+		if (selectedUsers.length === 0) {
+			butaoEliminarShow.classList.remove("show");
+		}
+		else {
+			butaoEliminarShow.classList.add("show");
+		}
+
+		document.getElementById("utilizadoresIdsInput").value = selectedUsers.join(',');
+		console.log("users selecionados ", selectedUsers);
+	}
+
+	function submitUtilizadoresForm() {
+		if (selectedUsers.length > 0) {
+			document.getElementById("removeUtilizadores").submit();
+		}
+	}
 
 </script>
 </html>
